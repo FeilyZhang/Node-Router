@@ -1,0 +1,14 @@
+{
+  "map1" : {
+    "url" : "/url11",
+    "func" : "fun",
+    "method" : "get/post",
+    "des" : "des111"
+  },
+  "map2" : {
+    "url" : "/url12",
+    "func" : "fun",
+    "method" : "get/pos2",
+    "des" : "des1112"
+  }
+}
