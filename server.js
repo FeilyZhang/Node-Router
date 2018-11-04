@@ -5,7 +5,6 @@ var router = require('./router/router');
 
 var map = router.parseConfig(router.getConfig());
 http.createServer(function(req, res) {
-  console.log(req.url);
   for (var i in map.url) {
     if (url.parse(req.url, true).pathname === map.url[i]) {
       eval("handle." + map.func[i] + "(req, res)");
