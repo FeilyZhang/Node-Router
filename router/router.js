@@ -1,4 +1,6 @@
 var fs = require('fs');
+var url = require('url');
+var handle = require('../lib/handle');
 
 exports.getConfig = function() {
   return fs.readFileSync('./config.json', 'utf-8', function(err, contents) {
@@ -33,3 +35,11 @@ exports.parseConfig = function(obj) {
   }
   return {"url" : url, "func" : func, "method" : method};
 };
+
+exports.router = function(req, res, map) {
+  for (var i in map.url) {
+    if (url.parse(req.url, true).pathname === map.url[i]) {
+      eval("handle." + map.func[i] + "(req, res)");
+    }
+  }
+}
