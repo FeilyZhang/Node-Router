@@ -6,7 +6,7 @@ Node.js后端路由框架
 |- router  //路由功能的文件夹，其中router.js为核心模块
 |- src  //静态文件夹，存放静态资源
 |- tools  //工具文件夹，存放未传递req, res形参的js文件
-|- server.js  //http服务器的入口文件
+|- server.js  //http和https服务器的入口文件
 |- config.json  //配置文件，提供url到func的映射
 ```
 ## 用法
